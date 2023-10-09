@@ -25,5 +25,12 @@
 		font-size: 1.2rem;
         margin: auto;
         max-width: 90%;
+		text-align: center;
+	}
+}
+
+@media (max-width:812px){
+	.noti{
+		width: 80%;
 	}
 }

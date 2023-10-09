@@ -1,27 +1,54 @@
 # Tareas typescript practicar
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este es un proyecto para practicar los conocimientos básicos en typescript y react.
 
-Currently, two official plugins are available:
+## Tecnologías
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+***Lenguajes:*** Javascript, Typescript, Css
+***Librerias:*** React, React-dom, react-router-dom, gh-pages
+***Empaquetadora:*** Vite
 
-## Expanding the ESLint configuration
+### Instalar y ejecutar
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Instalar
 
-- Configure the top-level `parserOptions` property like this:
+`npm install`
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+Modo desarrollador
+
+`npm run dev`
+
+Construir archivos
+
+`nmp run build`
+
+Vista preview de los archivos estaticos
+
+`npm run preview`
+
+### Deploy en github
+
+Para hacer deploy en gighub se necesita que este proyecto al instalarlo tambien lo enlace a su propio repositorio.
+
+Primero se debe cambiar la base del url del proyecto en la carpeta `vite.config.ts` por el nombre de su repositorio
+
+```json
+export default defineConfig({
+  plugins: [react()],
+  base:'/tareastypescriptpractica/', //Editar esta propiedad
+  build:{
+    rollupOptions:{
+      input:{
+        main:resolve(__dirname, 'index.html')
+      }
+    }
+  }
+})
 ```
+## Pagina
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+[Pagina Tareas](https://pablosan1997.github.io/tareastypescriptpractica/#/notdone "Pagina Tareas")
+
+## Author
+
+[Pablo SG](https://github.com/PabloSan1997?tab=repositories "Pablo SG")
