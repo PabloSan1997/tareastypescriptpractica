@@ -32,7 +32,7 @@ Para hacer deploy en gighub se necesita que este proyecto al instalarlo tambien 
 
 Primero se debe cambiar la base del url del proyecto en la carpeta `vite.config.ts` por el nombre de su repositorio
 
-```json
+```javascript
 export default defineConfig({
   plugins: [react()],
   base:'/tareastypescriptpractica/', //Editar esta propiedad
