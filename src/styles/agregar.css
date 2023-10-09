@@ -1,0 +1,46 @@
+.agregar{
+    width: 550px;
+    background: var(--fondo);
+    border: 1px solid rgb(24, 24, 92);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: -100%;
+    transition: left 0.8s ease;
+    z-index: 1;
+    &.mostrar{
+        left: 0;
+    }
+    & h2{
+        color: white;
+        margin:20px auto 15px auto;
+    }
+    .nueva{
+        background: rgb(5, 1, 22);
+        font-size: 1.3rem;
+        padding: 10px;
+        border-radius: 5px;
+        width: 80%;
+        margin: auto;
+        outline: none;
+        border: none;
+        color: white;
+        &::placeholder{
+            color: rgb(41, 41, 88);
+        }
+    }
+    .boton{
+        width: fit-content;
+        padding: 5px 10px;
+        margin:20px auto;
+        cursor: pointer;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width:564px) {
+    .agregar{
+        left: -120%;
+        width: 100%;
+    }
+}

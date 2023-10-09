@@ -1,0 +1,96 @@
+
+.contenedor{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    &.hechas{
+        .tarea_caja{
+            background: rgb(5, 22, 14);
+            .flecha{
+                filter: drop-shadow(0 0 5px rgb(132, 240, 132));
+            }
+            .tiempo{
+                color: rgb(24, 88, 38);
+            }
+        }
+    }
+    .tarea_caja{
+        width: 100%;
+        margin: auto;
+        display: flex;
+        padding: 10px 0;
+        background: var(--fondo);
+        border-radius: 10px;
+        margin-bottom: 20px;
+        .flecha{
+            width: 30px;
+            color: white;
+            margin: auto 0 auto 2%;
+            cursor: pointer;
+            &:hover{
+                transform: scale(1.2);
+                filter: drop-shadow(0 0 5px rgb(192, 231, 192));
+            }
+        }
+        .tarea{
+            color: white;
+            margin: auto auto auto 2%;
+            max-width:70%;
+            font-size: 1.2rem;
+        }
+        .tiempo{
+            display: flex;
+            flex-direction: column;
+            margin: auto 2% auto auto;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            color: rgb(26, 46, 88);
+        }
+        .quitar{
+            width: 30px;
+            margin: auto 2% auto 0;
+            color: white;
+            cursor: pointer;
+            &:hover{
+                transform: scale(1.2);
+                filter: drop-shadow(0 0 2px rgb(238, 146, 146));
+            }
+        }
+    }
+}
+.mainti{
+    margin:40px auto;
+    color: white;
+    width: fit-content;
+    font-size: 1.9rem;
+}
+
+@media(max-width:556px){
+    .contenedor{
+        .tarea_caja{
+            flex-direction: column;
+            position: relative;
+            .flecha{
+                position: absolute;
+            }
+            .quitar{
+                position:absolute;
+                right: 0;
+            }
+            .tiempo{
+                font-size: .9rem;
+                flex-direction: row;
+                & span{
+                    margin-left:5px ;
+                }
+            }
+            .tarea{
+                font-size: 1rem;
+                margin:40px auto 15px auto;
+                max-width: 90%;
+            }
+        }
+    }
+}
